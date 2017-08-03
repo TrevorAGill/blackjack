@@ -2,6 +2,7 @@ import models.Blackjack;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -18,7 +19,11 @@ public class AppTest {
     @Test
     public void blackjack_ShuffleADeck() throws Exception {
         Blackjack newGame = new Blackjack();
-//        String firstCard = "2 of Club";
         assertNotEquals("2 of Club", newGame.createDeck().get(0));
+    }
+    @Test
+    public void blackjack_Deal2Cards_() throws Exception    {
+        Blackjack newGame = new Blackjack();
+        assertEquals(newGame.hand().size(),2);
     }
 }
