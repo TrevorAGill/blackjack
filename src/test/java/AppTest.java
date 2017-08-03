@@ -14,4 +14,11 @@ public class AppTest {
         Blackjack newGame = new Blackjack();
         assertEquals(52, newGame.createDeck().size());
     }
+
+    @Test
+    public void blackjack_ShuffleADeck() throws Exception {
+        Blackjack newGame = new Blackjack();
+//        String firstCard = "2 of Club";
+        assertNotEquals("2 of Club", newGame.createDeck().get(0));
+    }
 }
